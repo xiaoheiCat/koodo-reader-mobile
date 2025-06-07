@@ -99,7 +99,15 @@ class SettingDialog extends React.Component<
   changeSkin = (skin: string) => {
     ConfigService.setReaderConfig("appSkin", skin);
 
-    if (
+    if (skin === "eink") {
+      // 墨水屏模式：强制使用纯黑白色调
+      ConfigService.setReaderConfig("backgroundColor", "#FFFFFF");
+      ConfigService.setReaderConfig("textColor", "#000000");
+      // 应用墨水屏主题
+      import("../../../constants/einkTheme").then(({ applyEinkTheme }) => {
+        applyEinkTheme(false);
+      });
+    } else if (
       skin === "night" ||
       (ConfigService.getReaderConfig("appSkin") === "system" &&
         ConfigService.getReaderConfig("isOSNight") === "yes")

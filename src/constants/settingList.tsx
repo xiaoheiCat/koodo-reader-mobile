@@ -204,6 +204,7 @@ export const skinList = [
   { label: "Follow OS", value: "system" },
   { label: "Light mode", value: "light" },
   { label: "Night mode", value: "night" },
+  { label: "E-ink mode", value: "eink" },
 ];
 
 export const readerSettingList = [

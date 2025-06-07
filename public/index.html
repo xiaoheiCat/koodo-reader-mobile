@@ -4,23 +4,71 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.png" />
     <link rel="dns-prefetch" href="https://web.koodoreader.com" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="keywords" content="epub reader free koodo" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Koodo Reader" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="keywords" content="epub reader free koodo mobile" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.png" />
+    <link rel="apple-touch-startup-image" href="%PUBLIC_URL%/favicon.png" />
     <meta
       itemprop="name"
-      content="Koodo Reader - Free Epub Reader for Windows, Mac and Web"
+      content="Koodo Reader - Free Epub Reader for Web mobile"
     />
     <meta
       itemprop="description"
-      content="Koodo Reader is an open-source epub reader with backup and restore support, runs on Windows, Mac and Web"
+      content="Koodo Reader is an open-source epub reader with backup and restore support, runs on Windows, Mac, Web and Mobile"
     />
     <style>
+      * {
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      
+      html, body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        -webkit-overflow-scrolling: touch;
+        position: fixed;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+      
       #root {
         height: 100%;
         width: 100%;
         position: fixed;
         top: 0px;
         left: 0px;
+        touch-action: manipulation;
+      }
+      
+      /* Mobile specific styles */
+      @media screen and (max-width: 768px) {
+        body {
+          font-size: 16px;
+        }
+        
+        #root {
+          padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+        }
+      }
+      
+      /* Prevent zoom on input focus */
+      input, textarea, select {
+        font-size: 16px !important;
       }
     </style>
     <title>Koodo Reader</title>

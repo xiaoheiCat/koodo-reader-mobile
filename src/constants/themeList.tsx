@@ -42,6 +42,18 @@ export const themeList = [
     name: "purple",
     title: "Purple",
   },
+  {
+    id: 5,
+    color: "#000000",
+    name: "eink-light",
+    title: "E-ink Light",
+  },
+  {
+    id: 6,
+    color: "#FFFFFF",
+    name: "eink-dark",
+    title: "E-ink Dark",
+  },
 ];
 export const classes = [
   "color-0",
@@ -53,5 +65,5 @@ export const classes = [
   "line-2",
   "line-3",
 ];
-export const colors = ["#FEF3CD", "#FBFACC", "#CEFACD", "#CDE9FA"];
-export const lines = ["#FF0000", "#000080", "#0000FF", "#2EFF2E"];
+export const colors = ["#FEF3CD", "#FBFACC", "#CEFACD", "#CDE9FA", "#FFFFFF", "#000000"];
+export const lines = ["#FF0000", "#000080", "#0000FF", "#2EFF2E", "#000000", "#FFFFFF"];

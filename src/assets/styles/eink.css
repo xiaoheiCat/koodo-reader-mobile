@@ -1,0 +1,191 @@
+/* 墨水屏优化样式 - E-ink Optimized Styles */
+/* 确保界面主要使用 #000000 与 #FFFFFF */
+
+/* CSS变量定义 */
+:root {
+  --eink-bg-color: #FFFFFF;
+  --eink-text-color: #000000;
+  --eink-border-color: #000000;
+  --eink-shadow: none;
+  --eink-transition: none;
+}
+
+/* 墨水屏优化基础样式 */
+.eink-optimized {
+  /* 禁用所有动画和过渡效果 */
+  *, *::before, *::after {
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* 强制使用纯黑白色调 */
+  background-color: var(--eink-bg-color) !important;
+  color: var(--eink-text-color) !important;
+}
+
+/* 主要容器和布局 */
+.eink-optimized .manager-container,
+.eink-optimized .reader-container,
+.eink-optimized .login-container {
+  background-color: var(--eink-bg-color) !important;
+  color: var(--eink-text-color) !important;
+}
+
+/* 按钮样式 */
+.eink-optimized button,
+.eink-optimized .button,
+.eink-optimized input[type="button"],
+.eink-optimized input[type="submit"] {
+  background-color: var(--eink-bg-color) !important;
+  color: var(--eink-text-color) !important;
+  border: 2px solid var(--eink-border-color) !important;
+  box-shadow: none !important;
+  transition: none !important;
+}
+
+.eink-optimized button:hover,
+.eink-optimized .button:hover {
+  background-color: var(--eink-text-color) !important;
+  color: var(--eink-bg-color) !important;
+}
+
+/* 输入框样式 */
+.eink-optimized input,
+.eink-optimized textarea,
+.eink-optimized select {
+  background-color: var(--eink-bg-color) !important;
+  color: var(--eink-text-color) !important;
+  border: 1px solid var(--eink-border-color) !important;
+  box-shadow: none !important;
+}
+
+/* 链接样式 */
+.eink-optimized a {
+  color: var(--eink-text-color) !important;
+  text-decoration: underline !important;
+}
+
+.eink-optimized a:hover {
+  background-color: var(--eink-text-color) !important;
+  color: var(--eink-bg-color) !important;
+}
+
+/* 卡片和面板 */
+.eink-optimized .card,
+.eink-optimized .panel,
+.eink-optimized .dialog,
+.eink-optimized .modal {
+  background-color: var(--eink-bg-color) !important;
+  color: var(--eink-text-color) !important;
+  border: 1px solid var(--eink-border-color) !important;
+  box-shadow: none !important;
+}
+
+/* 书籍列表项 */
+.eink-optimized .book-item,
+.eink-optimized .book-list-item {
+  background-color: var(--eink-bg-color) !important;
+  color: var(--eink-text-color) !important;
+  border: 1px solid var(--eink-border-color) !important;
+}
+
+.eink-optimized .book-item:hover,
+.eink-optimized .book-list-item:hover {
+  background-color: var(--eink-text-color) !important;
+  color: var(--eink-bg-color) !important;
+}
+
+/* 导航和菜单 */
+.eink-optimized .nav,
+.eink-optimized .menu,
+.eink-optimized .sidebar {
+  background-color: var(--eink-bg-color) !important;
+  color: var(--eink-text-color) !important;
+  border: 1px solid var(--eink-border-color) !important;
+}
+
+/* 头部和工具栏 */
+.eink-optimized .header,
+.eink-optimized .toolbar {
+  background-color: var(--eink-bg-color) !important;
+  color: var(--eink-text-color) !important;
+  border-bottom: 1px solid var(--eink-border-color) !important;
+}
+
+/* 阅读器相关 */
+.eink-optimized .reader-content {
+  background-color: var(--eink-bg-color) !important;
+  color: var(--eink-text-color) !important;
+}
+
+/* 强制覆盖所有彩色元素 */
+.eink-optimized [style*="color"],
+.eink-optimized [style*="background"] {
+  color: var(--eink-text-color) !important;
+  background-color: var(--eink-bg-color) !important;
+}
+
+/* 图标颜色 */
+.eink-optimized [class^="icon-"],
+.eink-optimized [class*=" icon-"] {
+  color: var(--eink-text-color) !important;
+}
+
+/* 特殊状态 */
+.eink-optimized .active,
+.eink-optimized .selected {
+  background-color: var(--eink-text-color) !important;
+  color: var(--eink-bg-color) !important;
+}
+
+/* 禁用渐变和阴影 */
+.eink-optimized * {
+  background-image: none !important;
+  background-gradient: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  filter: none !important;
+}
+
+/* 强制移除所有非黑白颜色 */
+.eink-optimized * {
+  color: var(--eink-text-color) !important;
+  background-color: var(--eink-bg-color) !important;
+  border-color: var(--eink-border-color) !important;
+}
+
+/* 确保文本可读性 */
+.eink-optimized {
+  font-weight: normal !important;
+  font-style: normal !important;
+}
+
+/* 暗色主题变体 */
+.eink-optimized.eink-dark {
+  --eink-bg-color: #000000;
+  --eink-text-color: #FFFFFF;
+  --eink-border-color: #FFFFFF;
+}
+
+/* 媒体查询 - 检测可能的墨水屏设备 */
+@media (monochrome) {
+  body {
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+  }
+}
+
+/* 打印样式优化 */
+@media print {
+  * {
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+}

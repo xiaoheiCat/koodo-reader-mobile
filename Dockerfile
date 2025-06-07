@@ -6,7 +6,7 @@ WORKDIR /app
 # RUN tarball_url=$(curl -s https://api.github.com/repos/koodo-reader/koodo-reader/releases/latest | jq -r ".tarball_url") \
 #     && wget -qO- $tarball_url \
 #     | tar xvfz - --strip 1
-RUN wget -qO- https://github.com/koodo-reader/koodo-reader/archive/refs/heads/master.tar.gz \
+RUN wget -qO- https://github.com/xiaoheiCat/koodo-reader-mobile/archive/refs/heads/master.tar.gz \
     | tar xvfz - --strip 1
 
 ### --network-timeout 1000000 as a workaround for slow devices

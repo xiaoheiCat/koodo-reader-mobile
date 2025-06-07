@@ -15,7 +15,7 @@ class ColorOption extends React.Component<ColorProps, ColorStates> {
   };
   render() {
     const renderLine = () => {
-      return ["#FF0000", "#000080", "#0000FF", "#2EFF2E"].map((item, index) => {
+      return ["#FF0000", "#000080", "#0000FF", "#2EFF2E", "#000000", "#FFFFFF"].map((item, index) => {
         return (
           <div
             className="line-option"
@@ -44,7 +44,7 @@ class ColorOption extends React.Component<ColorProps, ColorStates> {
       });
     };
     const renderColor = () => {
-      return ["#FBF1D1", "#EFEEB0", "#CAEFC9", "#76BEE9"].map((item, index) => {
+      return ["#FEF3CD", "#EFEEB0", "#CAEFC9", "#76BEE9", "#FFFFFF", "#000000"].map((item, index) => {
         return (
           <div
             className="color-option"
@@ -52,6 +52,8 @@ class ColorOption extends React.Component<ColorProps, ColorStates> {
               backgroundColor: item,
               border: `${this.props.color === index ? "" : "0px"}`,
               animation: `${this.props.isEdit ? undefined : ""}`,
+              // 为纯白色添加边框以便可见
+              ...(item === "#FFFFFF" ? { border: "1px solid #000000" } : {}),
             }}
             key={item}
             onClick={() => {

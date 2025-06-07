@@ -1,0 +1,28 @@
+{
+  "short_name": "Koodo Reader",
+  "name": "Koodo Reader - Free Epub Reader",
+  "description": "Koodo Reader is an open-source epub reader with backup and restore support, runs on Windows, Mac, Web and Mobile",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "scope": "./",
+  "categories": ["books", "education", "productivity"],
+  "lang": "en",
+  "dir": "ltr"
+}
